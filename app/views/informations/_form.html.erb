@@ -1,0 +1,24 @@
+<%= simple_form_for @information, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :title %>
+  <%= error_span(@information[:title]) %>
+  <%= f.input :writer %>
+  <%= error_span(@information[:writer]) %>
+  <%= f.input :image %>
+  <%= error_span(@information[:image]) %>
+  <%= f.input :text %>
+  <%= error_span(@information[:text]) %>
+  <%= f.input :price %>
+  <%= error_span(@information[:price]) %>
+  <%= f.input :rate %>
+  <%= error_span(@information[:rate]) %>
+  <%= f.input :review %>
+  <%= error_span(@information[:review]) %>
+  <%= f.input :state %>
+  <%= error_span(@information[:state]) %>
+  <%= f.input :status %>
+  <%= error_span(@information[:status]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                information_index_path, :class => 'btn btn-default' %>
+<% end %>
