@@ -17,14 +17,14 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :favorite_author %>
+        <%= f.label :author, "Favorite author" %>
         <%= f.text_field :author, class: 'form-control' %>
       </div>
 
       <div class="form-group">
         <%= f.label :gender %><br>
-        <label><%= f.radio_button :gender, "男" %> 男 </label>
-        <label><%= f.radio_button :gender, "女" %> 女 </label>
+        <%= f.radio_button :gender, "male" %>男性
+        <%= f.radio_button :gender, "female" %>女性
       </div>
 
       <div class="form-group">
@@ -33,7 +33,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation %>
+        <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
 

@@ -19,7 +19,6 @@ class InformationsController < ApplicationController
 
   def create
     Information.create(create_params)
-    redirect_to controller: :informations, action: :index
   end
 
   private
