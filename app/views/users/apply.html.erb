@@ -1,11 +1,11 @@
 <div class="contents">
 <% @informations.each do |information| %>
-  <% if information.status == 1 %>
+  <% if information.status == 0 %>
   <div class="container1">
     <div class="caption">
       <img src="<%= information.image %>">
       <h3><%= information.title %></h3>
-        <p><a href="/informations/<%= information.id %>/buy" class="btn btn-primary" role="button">購入する</a></p>
+        <p><a href="/informations/<%= information.id %>/completion" class="btn btn-primary" role="button">承認する</a></p>
     </div>
   </div>
   <% end %>

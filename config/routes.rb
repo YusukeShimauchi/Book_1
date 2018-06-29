@@ -1,7 +1,23 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root 'informations#index'
-  get 'informations/product' => 'informations#product'
-  get 'informations/:id/buy' => 'informations#buy'
-  resources :informations
+
+  resources :informations do
+    collection do
+      get :product
+    end
+    member do
+      get :buy
+      get :completion
+    end
+  end
+
+  resources :users do
+    member do
+      get :apply
+      get :history
+    end
+  end
+
 end
